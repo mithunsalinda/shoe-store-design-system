@@ -1,0 +1,124 @@
+.root {
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  gap: var(--ds-spacing-xs);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+}
+
+.disabled {
+  opacity: 0.56;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-spacing-2xs);
+  width: fit-content;
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: var(--ds-line-height-snug);
+}
+
+.required {
+  color: var(--ds-color-danger);
+}
+
+.description,
+.error {
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.description {
+  max-width: 24rem;
+  color: var(--ds-color-text-muted);
+}
+
+.error {
+  color: var(--ds-color-danger);
+}
+
+.inputs {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  gap: var(--ds-spacing-xs);
+}
+
+.input {
+  width: var(--otp-size);
+  height: var(--otp-size);
+  border: 1px solid var(--ds-color-border-strong);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+  font-size: var(--otp-font-size);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: 1;
+  text-align: center;
+  transition:
+    border-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    box-shadow var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    background-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard);
+}
+
+.input:hover:not(:disabled, :read-only) {
+  border-color: var(--ds-color-text-muted);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus-visible {
+  border-color: var(--ds-color-focus);
+  box-shadow: var(--ds-shadow-focus);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.input:read-only {
+  background: var(--ds-color-surface-muted);
+}
+
+.input[data-filled] {
+  border-color: var(--ds-color-primary);
+}
+
+.root[data-invalid] .input {
+  border-color: var(--ds-color-danger);
+}
+
+.separator {
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-font-size-lg);
+  line-height: 1;
+}
+
+.sm {
+  --otp-size: 2rem;
+  --otp-font-size: var(--ds-font-size-sm);
+}
+
+.md {
+  --otp-size: 2.5rem;
+  --otp-font-size: var(--ds-font-size-md);
+}
+
+.lg {
+  --otp-size: 3rem;
+  --otp-font-size: var(--ds-font-size-lg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .input {
+    transition: none;
+  }
+}

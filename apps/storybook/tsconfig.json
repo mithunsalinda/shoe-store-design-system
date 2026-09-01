@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node", "react", "react-dom"]
+  },
+  "include": [".storybook/**/*.ts", ".storybook/**/*.tsx", "*.ts"],
+  "exclude": ["storybook-static", "node_modules"]
+}

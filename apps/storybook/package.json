@@ -1,0 +1,32 @@
+{
+  "name": "@shoe-store/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Storybook documentation site for the Shoe Store design system.",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./scripts/run-storybook.mjs dev -p 6006 --disable-telemetry",
+    "storybook": "node ./scripts/run-storybook.mjs dev -p 6006 --disable-telemetry",
+    "build": "node ./scripts/run-storybook.mjs build --disable-telemetry",
+    "build-storybook": "node ./scripts/run-storybook.mjs build --disable-telemetry",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "test": "echo \"Storybook interaction tests will be added with component stories\"",
+    "clean": "node -e \"fs.rmSync('storybook-static', { recursive: true, force: true })\""
+  },
+  "dependencies": {
+    "@shoe-store/tokens": "workspace:*",
+    "@shoe-store/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.15",
+    "@storybook/addon-essentials": "^8.6.15",
+    "@storybook/addon-interactions": "^8.6.15",
+    "@storybook/blocks": "^8.6.15",
+    "@storybook/react": "8.6.15",
+    "@storybook/react-vite": "^8.6.15",
+    "@storybook/test": "^8.6.15",
+    "storybook": "^8.6.15",
+    "vite": "^6.0.0"
+  }
+}

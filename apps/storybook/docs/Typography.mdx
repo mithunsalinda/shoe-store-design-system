@@ -1,0 +1,34 @@
+import { Meta } from "@storybook/blocks";
+import { fontSizes, fontWeights, lineHeights } from "@shoe-store/tokens";
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Typography tokens keep UI text consistent across products.
+
+<div style={{ display: "grid", gap: "16px", fontFamily: "var(--ds-font-sans)" }}>
+  {Object.entries(fontSizes).map(([name, value]) => (
+    <div key={name} style={{ fontSize: value }}>
+      {name} · {value} · Product details for a running shoe
+    </div>
+  ))}
+</div>
+
+## Weights
+
+{Object.entries(fontWeights).map(([name, value]) => (
+
+  <p key={name} style={{ fontWeight: value }}>
+    {name}: {value}
+  </p>
+))}
+
+## Line Heights
+
+{Object.entries(lineHeights).map(([name, value]) => (
+
+  <p key={name}>
+    {name}: {value}
+  </p>
+))}

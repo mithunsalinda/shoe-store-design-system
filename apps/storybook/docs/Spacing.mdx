@@ -1,0 +1,24 @@
+import { Meta } from "@storybook/blocks";
+import { spacing } from "@shoe-store/tokens";
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+Spacing tokens are used for component padding, layout gaps, and rhythm.
+
+<div style={{ display: "grid", gap: "12px", fontFamily: "var(--ds-font-sans)" }}>
+  {Object.entries(spacing).map(([name, value]) => (
+    <div key={name} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <code style={{ width: "56px" }}>{name}</code>
+      <div
+        style={{
+          width: value === "0" ? "1px" : value,
+          height: "24px",
+          background: "var(--ds-color-secondary)",
+        }}
+      />
+      <span>{value}</span>
+    </div>
+  ))}
+</div>

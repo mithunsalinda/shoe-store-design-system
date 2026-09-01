@@ -1,0 +1,26 @@
+:where([data-ds-root], [data-ds-root] *, [data-ds-root] *::before, [data-ds-root] *::after) {
+  box-sizing: border-box;
+}
+
+:where([data-ds-root]) {
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+}
+
+:where(
+  [data-ds-root] button,
+  [data-ds-root] input,
+  [data-ds-root] textarea,
+  [data-ds-root] select
+) {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-ds-root], [data-ds-root] *, [data-ds-root] *::before, [data-ds-root] *::after) {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Introduction" />
+
+# Shoe Store Design System
+
+This Storybook is the standalone documentation and development environment for
+the design system. It is deployed separately from consumer React and Next.js
+applications, so Storybook dependencies never enter production app bundles.
+
+## Architecture
+
+```text
+Design tokens
+  -> Headless primitives
+  -> Design system components
+  -> Storybook
+  -> NPM packages
+  -> React and Next.js applications
+```
+
+The UI package owns the public component API, styling, tokens, and accessibility
+expectations. Internal headless primitives remain implementation details.

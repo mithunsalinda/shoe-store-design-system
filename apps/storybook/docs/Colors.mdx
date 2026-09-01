@@ -1,0 +1,42 @@
+import { Meta } from "@storybook/blocks";
+import { semanticColors } from "@shoe-store/tokens";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Semantic CSS variables are the preferred way to style components.
+
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+    gap: "16px",
+  }}
+>
+  {Object.entries(semanticColors.light).map(([name, value]) => (
+    <div
+      key={name}
+      style={{
+        border: "1px solid var(--ds-color-border)",
+        borderRadius: "var(--ds-radius-md)",
+        overflow: "hidden",
+        background: "var(--ds-color-surface)",
+      }}
+    >
+      <div style={{ height: "72px", background: value }} />
+      <div style={{ padding: "12px", fontFamily: "var(--ds-font-sans)" }}>
+        <strong>{name}</strong>
+        <div style={{ color: "var(--ds-color-text-muted)" }}>{value}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+## Token Families
+
+- `colors.neutral`
+- `colors.orange`
+- `colors.red`
+- `colors.green`
+- `colors.blue`

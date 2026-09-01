@@ -1,0 +1,123 @@
+.panel {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  max-height: 100%;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+}
+
+.sm {
+  max-width: 18rem;
+}
+
+.md {
+  max-width: 24rem;
+}
+
+.lg {
+  max-width: 32rem;
+}
+
+.plain {
+  border: 0;
+}
+
+.bordered {
+  border-color: var(--ds-color-border);
+  border-style: solid;
+  border-width: 0;
+}
+
+.bordered.right {
+  border-left-width: 1px;
+}
+
+.bordered.left {
+  border-right-width: 1px;
+}
+
+.elevated {
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  box-shadow: var(--ds-shadow-md);
+}
+
+.sticky {
+  position: sticky;
+  top: var(--ds-spacing-md);
+  align-self: start;
+  max-height: calc(100dvh - 2 * var(--ds-spacing-md));
+}
+
+.header {
+  display: grid;
+  min-width: 0;
+  gap: var(--ds-spacing-xs);
+  border-bottom: 1px solid var(--ds-color-border);
+  padding: var(--ds-spacing-lg);
+}
+
+.plain .header {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-lg);
+  font-weight: var(--ds-font-weight-bold);
+  line-height: var(--ds-line-height-tight);
+}
+
+.description {
+  margin: 0;
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.content {
+  min-width: 0;
+  overflow-y: auto;
+  padding: var(--ds-spacing-lg);
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.plain .content {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--ds-spacing-sm);
+  border-top: 1px solid var(--ds-color-border);
+  padding: var(--ds-spacing-md) var(--ds-spacing-lg) var(--ds-spacing-lg);
+}
+
+.plain .footer {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 48rem) {
+  .sm,
+  .md,
+  .lg {
+    max-width: none;
+  }
+
+  .sticky {
+    position: static;
+    max-height: none;
+  }
+}

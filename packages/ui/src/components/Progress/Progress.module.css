@@ -1,0 +1,117 @@
+.root {
+  --progress-color: var(--ds-color-primary);
+  --progress-value-color: var(--ds-color-text-muted);
+
+  display: grid;
+  width: min(100%, 22rem);
+  gap: var(--ds-spacing-xs);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+}
+
+.header {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-spacing-md);
+}
+
+.label {
+  min-width: 0;
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: var(--ds-line-height-snug);
+}
+
+.value {
+  flex: 0 0 auto;
+  color: var(--progress-value-color);
+  font-size: var(--ds-font-size-sm);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--ds-font-weight-medium);
+  line-height: var(--ds-line-height-snug);
+}
+
+.description {
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--ds-radius-full);
+  background: var(--ds-color-surface-muted);
+}
+
+.indicator {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--progress-color);
+  transition: width var(--ds-transition-duration-normal) var(--ds-transition-easing-standard);
+}
+
+.root[data-status="indeterminate"] .indicator {
+  width: 40%;
+  animation: progress-indeterminate 1.2s var(--ds-transition-easing-standard) infinite;
+}
+
+.sm .track {
+  height: 0.375rem;
+}
+
+.md .track {
+  height: 0.5rem;
+}
+
+.lg .track {
+  height: 0.75rem;
+}
+
+.neutral {
+  --progress-color: var(--ds-color-text);
+}
+
+.info {
+  --progress-color: var(--ds-color-primary);
+  --progress-value-color: var(--ds-color-primary-strong);
+}
+
+.success {
+  --progress-color: var(--ds-color-success);
+  --progress-value-color: var(--ds-color-success-strong);
+}
+
+.warning {
+  --progress-color: var(--ds-color-warning);
+  --progress-value-color: var(--ds-color-warning-strong);
+}
+
+.danger {
+  --progress-color: var(--ds-color-danger);
+  --progress-value-color: var(--ds-color-danger-strong);
+}
+
+@keyframes progress-indeterminate {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(250%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indicator {
+    transition: none;
+  }
+
+  .root[data-status="indeterminate"] .indicator {
+    animation: none;
+  }
+}

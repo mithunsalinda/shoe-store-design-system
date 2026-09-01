@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Foundations/Theming" />
+
+# Theming
+
+Themes are selected with `data-theme`.
+
+```html
+<html data-theme="dark"></html>
+```
+
+Consumers can override public CSS variables without recompiling packages.
+
+```css
+:root {
+  --ds-color-primary: #000000;
+  --ds-color-secondary: #ff5a1f;
+}
+```
+
+Use the toolbar theme selector above to preview light, dark, and Shoe Store brand
+tokens.

@@ -1,0 +1,119 @@
+.root {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--ds-radius-md);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: contain;
+}
+
+.content {
+  min-width: 0;
+}
+
+.scrollbar {
+  display: flex;
+  touch-action: none;
+  user-select: none;
+  opacity: 0;
+  transition:
+    background-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    opacity var(--ds-transition-duration-fast) var(--ds-transition-easing-standard);
+}
+
+.root:hover .scrollbar,
+.scrollbar[data-scrolling],
+.scrollbar[data-hovering] {
+  opacity: 1;
+}
+
+.scrollbar[data-orientation="vertical"] {
+  width: var(--scrollbar-size);
+  padding: 0.125rem;
+}
+
+.scrollbar[data-orientation="horizontal"] {
+  height: var(--scrollbar-size);
+  flex-direction: column;
+  padding: 0.125rem;
+}
+
+.vertical {
+  border-left: 1px solid transparent;
+}
+
+.horizontal {
+  border-top: 1px solid transparent;
+}
+
+.thumb {
+  flex: 1;
+  border-radius: var(--ds-radius-full);
+  background: var(--ds-color-border-strong);
+  transition: background-color var(--ds-transition-duration-fast)
+    var(--ds-transition-easing-standard);
+}
+
+.thumb:hover {
+  background: var(--ds-color-text-muted);
+}
+
+.corner {
+  background: var(--ds-color-surface);
+}
+
+.edgeShadows::before,
+.edgeShadows::after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  opacity: 0;
+  transition: opacity var(--ds-transition-duration-fast) var(--ds-transition-easing-standard);
+}
+
+.edgeShadows::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.14), transparent);
+}
+
+.edgeShadows::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.14), transparent);
+}
+
+.edgeShadows[data-overflow-y-start]::before,
+.edgeShadows[data-overflow-y-end]::after {
+  opacity: 1;
+}
+
+.sm {
+  --scrollbar-size: 0.5rem;
+}
+
+.md {
+  --scrollbar-size: 0.75rem;
+}
+
+.lg {
+  --scrollbar-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollbar,
+  .thumb,
+  .edgeShadows::before,
+  .edgeShadows::after {
+    transition: none;
+  }
+}

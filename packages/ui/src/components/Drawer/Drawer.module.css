@@ -1,0 +1,347 @@
+.trigger {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ds-color-primary);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-primary);
+  color: var(--ds-color-text-inverse);
+  cursor: pointer;
+  font-family: var(--ds-font-sans);
+  font-size: var(--ds-font-size-sm);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: var(--ds-line-height-snug);
+  padding: 0 var(--ds-spacing-md);
+  transition:
+    background-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    border-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    box-shadow var(--ds-transition-duration-fast) var(--ds-transition-easing-standard);
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: var(--ds-color-primary-strong);
+  background: var(--ds-color-primary-strong);
+}
+
+.trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-shadow-focus);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  min-height: 100dvh;
+  background: rgb(15 23 42 / 48%);
+  animation: drawerBackdropIn var(--ds-transition-duration-normal)
+    var(--ds-transition-easing-standard);
+}
+
+.backdrop[data-ending-style] {
+  opacity: 0;
+}
+
+.viewport {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.viewport.right {
+  justify-content: flex-end;
+}
+
+.viewport.left {
+  justify-content: flex-start;
+}
+
+.viewport.top {
+  align-items: flex-start;
+}
+
+.viewport.bottom {
+  align-items: flex-end;
+}
+
+.drawer {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  border: 0 solid var(--ds-color-border);
+  background: var(--ds-color-surface);
+  box-shadow: var(--ds-shadow-xl);
+  color: var(--ds-color-text);
+  font-family: var(--ds-font-sans);
+  animation-duration: var(--ds-transition-duration-normal);
+  animation-timing-function: var(--ds-transition-easing-standard);
+}
+
+.drawer.right,
+.drawer.left {
+  width: min(100vw, 32rem);
+  height: 100dvh;
+}
+
+.drawer.right {
+  border-left-width: 1px;
+  animation-name: drawerInRight;
+}
+
+.drawer.left {
+  border-right-width: 1px;
+  animation-name: drawerInLeft;
+}
+
+.drawer.top,
+.drawer.bottom {
+  width: 100vw;
+  height: min(100dvh, 24rem);
+}
+
+.drawer.top {
+  border-bottom-width: 1px;
+  animation-name: drawerInTop;
+}
+
+.drawer.bottom {
+  border-top-width: 1px;
+  animation-name: drawerInBottom;
+}
+
+.drawer[data-ending-style] {
+  opacity: 0;
+}
+
+.right[data-ending-style] {
+  transform: translateX(1.5rem);
+}
+
+.left[data-ending-style] {
+  transform: translateX(-1.5rem);
+}
+
+.top[data-ending-style] {
+  transform: translateY(-1.5rem);
+}
+
+.bottom[data-ending-style] {
+  transform: translateY(1.5rem);
+}
+
+.sm.right,
+.sm.left {
+  width: min(100vw, 24rem);
+}
+
+.md.right,
+.md.left {
+  width: min(100vw, 32rem);
+}
+
+.lg.right,
+.lg.left {
+  width: min(100vw, 44rem);
+}
+
+.full.right,
+.full.left {
+  width: 100vw;
+}
+
+.sm.top,
+.sm.bottom {
+  height: min(100dvh, 18rem);
+}
+
+.md.top,
+.md.bottom {
+  height: min(100dvh, 24rem);
+}
+
+.lg.top,
+.lg.bottom {
+  height: min(100dvh, 36rem);
+}
+
+.full.top,
+.full.bottom {
+  height: 100dvh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--ds-spacing-md);
+  border-bottom: 1px solid var(--ds-color-border);
+  padding: var(--ds-spacing-xl);
+}
+
+.intro {
+  display: grid;
+  min-width: 0;
+  gap: var(--ds-spacing-xs);
+}
+
+.title {
+  margin: 0;
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-lg);
+  font-weight: var(--ds-font-weight-bold);
+  line-height: var(--ds-line-height-tight);
+}
+
+.description {
+  margin: 0;
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.close {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--ds-radius-md);
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    color var(--ds-transition-duration-fast) var(--ds-transition-easing-standard),
+    box-shadow var(--ds-transition-duration-fast) var(--ds-transition-easing-standard);
+}
+
+.close:hover {
+  background: var(--ds-color-surface-muted);
+  color: var(--ds-color-text);
+}
+
+.close:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-shadow-focus);
+}
+
+.closeIcon {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.content {
+  min-width: 0;
+  overflow-y: auto;
+  padding: var(--ds-spacing-xl);
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-sm);
+  line-height: var(--ds-line-height-normal);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--ds-spacing-sm);
+  border-top: 1px solid var(--ds-color-border);
+  padding: var(--ds-spacing-md) var(--ds-spacing-xl) var(--ds-spacing-xl);
+}
+
+@keyframes drawerBackdropIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawerInRight {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawerInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawerInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawerInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .drawer.right,
+  .drawer.left,
+  .sm.right,
+  .sm.left,
+  .md.right,
+  .md.left,
+  .lg.right,
+  .lg.left {
+    width: 100vw;
+  }
+
+  .header,
+  .content {
+    padding: var(--ds-spacing-lg);
+  }
+
+  .footer {
+    padding: var(--ds-spacing-md) var(--ds-spacing-lg) var(--ds-spacing-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger,
+  .backdrop,
+  .drawer,
+  .close {
+    transition: none;
+    animation: none;
+  }
+}

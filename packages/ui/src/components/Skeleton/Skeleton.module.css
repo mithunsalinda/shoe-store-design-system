@@ -1,0 +1,56 @@
+.skeleton {
+  display: block;
+  width: 100%;
+  background:
+    linear-gradient(90deg, transparent, rgb(255 255 255 / 0.46), transparent),
+    var(--ds-color-surface-muted);
+  background-size:
+    200% 100%,
+    100% 100%;
+}
+
+.animated {
+  animation: skeletonShimmer 1.4s var(--ds-transition-easing-standard) infinite;
+}
+
+.text {
+  height: 1em;
+  border-radius: var(--ds-radius-sm);
+}
+
+.rectangle {
+  min-height: 4rem;
+  border-radius: var(--ds-radius-md);
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--ds-radius-full);
+}
+
+.group {
+  display: grid;
+  gap: var(--ds-spacing-sm);
+  width: 100%;
+}
+
+@keyframes skeletonShimmer {
+  from {
+    background-position:
+      200% 0,
+      0 0;
+  }
+
+  to {
+    background-position:
+      -200% 0,
+      0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated {
+    animation: none;
+  }
+}

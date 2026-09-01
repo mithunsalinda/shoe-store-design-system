@@ -1,0 +1,146 @@
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --ds-color-background: #ffffff;
+  --ds-color-surface: #ffffff;
+  --ds-color-surface-muted: #f8fafc;
+  --ds-color-surface-raised: #ffffff;
+  --ds-color-border: #e2e8f0;
+  --ds-color-border-strong: #cbd5e1;
+  --ds-color-text: #0f172a;
+  --ds-color-text-muted: #475569;
+  --ds-color-text-inverse: #ffffff;
+  --ds-color-primary: #0f172a;
+  --ds-color-primary-hover: #1e293b;
+  --ds-color-primary-soft: #f1f5f9;
+  --ds-color-primary-strong: #020617;
+  --ds-color-secondary: #f97316;
+  --ds-color-secondary-hover: #ea580c;
+  --ds-color-danger: #dc2626;
+  --ds-color-danger-hover: #b91c1c;
+  --ds-color-danger-soft: #fef2f2;
+  --ds-color-danger-strong: #b91c1c;
+  --ds-color-success: #16a34a;
+  --ds-color-success-soft: #f0fdf4;
+  --ds-color-success-strong: #15803d;
+  --ds-color-warning: #f97316;
+  --ds-color-warning-soft: #fff7ed;
+  --ds-color-warning-strong: #c2410c;
+  --ds-color-info: #2563eb;
+  --ds-color-info-soft: #eff6ff;
+  --ds-color-info-strong: #1d4ed8;
+  --ds-color-focus: #f97316;
+
+  --ds-font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --ds-font-size-xs: 0.75rem;
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.125rem;
+  --ds-font-size-xl: 1.25rem;
+  --ds-font-size-2xl: 1.5rem;
+  --ds-font-size-3xl: 1.875rem;
+  --ds-font-size-4xl: 2.25rem;
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-line-height-tight: 1.2;
+  --ds-line-height-snug: 1.35;
+  --ds-line-height-normal: 1.5;
+  --ds-line-height-relaxed: 1.7;
+
+  --ds-spacing-0: 0;
+  --ds-spacing-2xs: 0.125rem;
+  --ds-spacing-xs: 0.25rem;
+  --ds-spacing-sm: 0.5rem;
+  --ds-spacing-md: 1rem;
+  --ds-spacing-lg: 1.5rem;
+  --ds-spacing-xl: 2rem;
+  --ds-spacing-2xl: 3rem;
+  --ds-spacing-3xl: 4rem;
+
+  --ds-radius-none: 0;
+  --ds-radius-xs: 0.125rem;
+  --ds-radius-sm: 0.25rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --ds-radius-full: 9999px;
+
+  --ds-shadow-none: none;
+  --ds-shadow-sm: 0 1px 2px rgb(15 23 42 / 0.08);
+  --ds-shadow-md: 0 4px 12px rgb(15 23 42 / 0.12);
+  --ds-shadow-lg: 0 12px 28px rgb(15 23 42 / 0.16);
+  --ds-shadow-focus: 0 0 0 3px rgb(249 115 22 / 0.35);
+
+  --ds-breakpoint-xs: 480px;
+  --ds-breakpoint-sm: 640px;
+  --ds-breakpoint-md: 768px;
+  --ds-breakpoint-lg: 1024px;
+  --ds-breakpoint-xl: 1280px;
+  --ds-breakpoint-2xl: 1536px;
+
+  --ds-transition-duration-instant: 0ms;
+  --ds-transition-duration-fast: 120ms;
+  --ds-transition-duration-normal: 180ms;
+  --ds-transition-duration-slow: 240ms;
+  --ds-transition-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ds-transition-easing-entrance: cubic-bezier(0, 0, 0.2, 1);
+  --ds-transition-easing-exit: cubic-bezier(0.4, 0, 1, 1);
+
+  --ds-z-index-base: 0;
+  --ds-z-index-raised: 10;
+  --ds-z-index-dropdown: 100;
+  --ds-z-index-sticky: 200;
+  --ds-z-index-overlay: 400;
+  --ds-z-index-modal: 500;
+  --ds-z-index-toast: 600;
+  --ds-z-index-tooltip: 700;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ds-color-background: #020617;
+  --ds-color-surface: #0f172a;
+  --ds-color-surface-muted: #1e293b;
+  --ds-color-surface-raised: #1e293b;
+  --ds-color-border: #334155;
+  --ds-color-border-strong: #475569;
+  --ds-color-text: #f8fafc;
+  --ds-color-text-muted: #cbd5e1;
+  --ds-color-text-inverse: #020617;
+  --ds-color-primary: #f8fafc;
+  --ds-color-primary-hover: #e2e8f0;
+  --ds-color-primary-soft: #1e293b;
+  --ds-color-primary-strong: #ffffff;
+  --ds-color-secondary: #fb923c;
+  --ds-color-secondary-hover: #fdba74;
+  --ds-color-danger: #ef4444;
+  --ds-color-danger-hover: #dc2626;
+  --ds-color-danger-soft: #7f1d1d;
+  --ds-color-danger-strong: #fecaca;
+  --ds-color-success: #22c55e;
+  --ds-color-success-soft: #14532d;
+  --ds-color-success-strong: #bbf7d0;
+  --ds-color-warning: #fb923c;
+  --ds-color-warning-soft: #7c2d12;
+  --ds-color-warning-strong: #fed7aa;
+  --ds-color-info: #3b82f6;
+  --ds-color-info-soft: #1e3a8a;
+  --ds-color-info-strong: #bfdbfe;
+  --ds-color-focus: #fb923c;
+}
+
+[data-theme="shoe-store"] {
+  --ds-color-primary: #111827;
+  --ds-color-primary-hover: #1f2937;
+  --ds-color-primary-soft: #f3f4f6;
+  --ds-color-primary-strong: #030712;
+  --ds-color-secondary: #ff5a1f;
+  --ds-color-secondary-hover: #e94b10;
+  --ds-color-focus: #ff5a1f;
+}

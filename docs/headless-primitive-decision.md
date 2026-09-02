@@ -3,7 +3,7 @@
 ## Goal
 
 Choose the internal headless primitive layer for complex interactive components in
-`@veyqor/ui`.
+`@mithunsalinda/veyqor-ui`.
 
 ## Decision
 
@@ -28,12 +28,12 @@ Popover, DropdownMenu, Tabs, Accordion, and Menu.
 
 ## Public API Boundary
 
-Consumers must import from `@veyqor/ui`, not from `@base-ui/react`.
+Consumers must import from `@mithunsalinda/veyqor-ui`, not from `@base-ui/react`.
 
 Good:
 
 ```tsx
-import { Dialog, Select } from "@veyqor/ui";
+import { Dialog, Select } from "@mithunsalinda/veyqor-ui";
 ```
 
 Avoid in consuming apps:
@@ -59,4 +59,4 @@ is explicitly positioned for custom React design systems.
 
 Task 8 should use Base UI for Checkbox unless native semantics are enough for our
 chosen API. More complex tasks such as Select, Dialog, Tooltip, DropdownMenu, and
-Tabs should use Base UI primitives behind `@veyqor/ui` wrappers.
+Tabs should use Base UI primitives behind `@mithunsalinda/veyqor-ui` wrappers.

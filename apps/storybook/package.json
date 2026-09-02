@@ -1,5 +1,5 @@
 {
-  "name": "@veyqor/storybook",
+  "name": "@mithunsalinda/veyqor-storybook",
   "version": "0.1.0",
   "private": true,
   "description": "Storybook documentation site for the Veyqor design system.",
@@ -15,8 +15,8 @@
     "clean": "node -e \"fs.rmSync('storybook-static', { recursive: true, force: true })\""
   },
   "dependencies": {
-    "@veyqor/tokens": "workspace:*",
-    "@veyqor/ui": "workspace:*"
+    "@mithunsalinda/veyqor-tokens": "workspace:*",
+    "@mithunsalinda/veyqor-ui": "workspace:*"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.6.15",

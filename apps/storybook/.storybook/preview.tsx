@@ -1,5 +1,5 @@
 import type { Decorator, Preview } from "@storybook/react";
-import "@veyqor/ui/styles.css";
+import "@mithunsalinda/veyqor-ui/styles.css";
 
 const withTheme: Decorator = (Story, context) => {
   const theme = context.globals["theme"] as string | undefined;

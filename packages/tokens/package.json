@@ -1,5 +1,5 @@
 {
-  "name": "@veyqor/tokens",
+  "name": "@mithunsalinda/veyqor-tokens",
   "version": "0.1.0",
   "description": "Design tokens and CSS custom properties for the Veyqor design system.",
   "type": "module",

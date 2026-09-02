@@ -1,4 +1,4 @@
-# @veyqor/tokens
+# @mithunsalinda/veyqor-tokens
 
 Design tokens and CSS custom properties for the Veyqor Design System.
 
@@ -7,13 +7,13 @@ Design tokens and CSS custom properties for the Veyqor Design System.
 Import token objects in TypeScript:
 
 ```ts
-import { colors, spacing, themes } from "@veyqor/tokens";
+import { colors, spacing, themes } from "@mithunsalinda/veyqor-tokens";
 ```
 
 Import CSS variables:
 
 ```css
-@import "@veyqor/tokens/styles.css";
+@import "@mithunsalinda/veyqor-tokens/styles.css";
 ```
 
 Set the active theme with `data-theme`:
@@ -25,7 +25,7 @@ Set the active theme with `data-theme`:
 ## Development
 
 ```bash
-corepack pnpm --filter @veyqor/tokens typecheck
-corepack pnpm --filter @veyqor/tokens lint
-corepack pnpm --filter @veyqor/tokens build
+corepack pnpm --filter @mithunsalinda/veyqor-tokens typecheck
+corepack pnpm --filter @mithunsalinda/veyqor-tokens lint
+corepack pnpm --filter @mithunsalinda/veyqor-tokens build
 ```

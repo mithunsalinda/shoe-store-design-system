@@ -1,6 +1,6 @@
 # Component Inventory
 
-Current `@veyqor/ui` exports:
+Current `@mithunsalinda/veyqor-ui` exports:
 
 ## Actions
 

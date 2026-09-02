@@ -1,4 +1,4 @@
-# @veyqor/ui
+# @mithunsalinda/veyqor-ui
 
 React components for the Veyqor Design System.
 
@@ -7,7 +7,7 @@ React components for the Veyqor Design System.
 This package expects React and React DOM from the consuming application.
 
 ```bash
-pnpm add @veyqor/ui
+pnpm add @mithunsalinda/veyqor-ui
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ pnpm add @veyqor/ui
 Import the CSS once:
 
 ```tsx
-import "@veyqor/ui/styles.css";
+import "@mithunsalinda/veyqor-ui/styles.css";
 ```
 
 Use components from the package root:
 
 ```tsx
-import { Button, Dialog, Select } from "@veyqor/ui";
+import { Button, Dialog, Select } from "@mithunsalinda/veyqor-ui";
 
 export function ProductActions() {
   return (
@@ -35,10 +35,10 @@ export function ProductActions() {
 ## Development
 
 ```bash
-corepack pnpm --filter @veyqor/ui test
-corepack pnpm --filter @veyqor/ui typecheck
-corepack pnpm --filter @veyqor/ui lint
-corepack pnpm --filter @veyqor/ui build
+corepack pnpm --filter @mithunsalinda/veyqor-ui test
+corepack pnpm --filter @mithunsalinda/veyqor-ui typecheck
+corepack pnpm --filter @mithunsalinda/veyqor-ui lint
+corepack pnpm --filter @mithunsalinda/veyqor-ui build
 ```
 
 Storybook examples live in `apps/storybook`.

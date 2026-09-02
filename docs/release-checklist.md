@@ -8,17 +8,17 @@ corepack pnpm typecheck
 corepack pnpm lint
 corepack pnpm format:check
 corepack pnpm build
-corepack pnpm --filter @veyqor/storybook build
+corepack pnpm --filter @mithunsalinda/veyqor-storybook build
 ```
 
 ## Package Checks
 
-- Confirm `@veyqor/ui` exports the component and public types from
+- Confirm `@mithunsalinda/veyqor-ui` exports the component and public types from
   `packages/ui/src/index.ts`.
 - Confirm package CSS is generated at `packages/ui/dist/styles.css`.
-- Confirm React and React DOM remain peer dependencies in `@veyqor/ui`.
+- Confirm React and React DOM remain peer dependencies in `@mithunsalinda/veyqor-ui`.
 - Confirm Storybook dependencies stay in `apps/storybook`.
-- Confirm internal headless primitives are hidden behind `@veyqor/ui`.
+- Confirm internal headless primitives are hidden behind `@mithunsalinda/veyqor-ui`.
 
 ## Storybook Checks
 

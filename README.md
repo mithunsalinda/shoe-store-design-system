@@ -1,14 +1,14 @@
-# Shoe Design System
+# Veyqor Design System
 
-A production-ready headless React design system monorepo for shoe store
+A production-ready headless React design system monorepo for Veyqor
 applications.
 
 ## What Is Included
 
-- `@shoe-store/tokens`: TypeScript design tokens and CSS custom properties.
-- `@shoe-store/ui`: React components styled with CSS Modules and public design
+- `@veyqor/tokens`: TypeScript design tokens and CSS custom properties.
+- `@veyqor/ui`: React components styled with CSS Modules and public design
   tokens.
-- `@shoe-store/storybook`: Local and static documentation/preview app.
+- `@veyqor/storybook`: Local and static documentation/preview app.
 
 The `packages/icons` folder is currently a placeholder for a future icon package.
 
@@ -52,9 +52,9 @@ corepack pnpm storybook
 Useful package-scoped commands:
 
 ```bash
-corepack pnpm --filter @shoe-store/ui build
-corepack pnpm --filter @shoe-store/ui test
-corepack pnpm --filter @shoe-store/storybook build
+corepack pnpm --filter @veyqor/ui build
+corepack pnpm --filter @veyqor/ui test
+corepack pnpm --filter @veyqor/storybook build
 ```
 
 ## Use The UI Package
@@ -62,30 +62,30 @@ corepack pnpm --filter @shoe-store/storybook build
 Import the compiled CSS once in the consuming app:
 
 ```tsx
-import "@shoe-store/ui/styles.css";
+import "@veyqor/ui/styles.css";
 ```
 
 Import components from the design system package:
 
 ```tsx
-import { Button, Select, Dialog } from "@shoe-store/ui";
+import { Button, Select, Dialog } from "@veyqor/ui";
 ```
 
 Do not import internal primitive libraries directly in consuming apps. The public
-API boundary is `@shoe-store/ui`.
+API boundary is `@veyqor/ui`.
 
 ## Tokens
 
 Use token objects in TypeScript:
 
 ```ts
-import { colors, spacing, themes } from "@shoe-store/tokens";
+import { colors, spacing, themes } from "@veyqor/tokens";
 ```
 
 Use CSS variables in styles:
 
 ```css
-@import "@shoe-store/tokens/styles.css";
+@import "@veyqor/tokens/styles.css";
 ```
 
 Themes are selected with `data-theme`:
@@ -112,7 +112,7 @@ corepack pnpm typecheck
 corepack pnpm lint
 corepack pnpm format:check
 corepack pnpm build
-corepack pnpm --filter @shoe-store/storybook build
+corepack pnpm --filter @veyqor/storybook build
 ```
 
 See [docs/release-checklist.md](docs/release-checklist.md) for the full release
@@ -121,12 +121,12 @@ checklist.
 ## Architecture
 
 ```text
-@shoe-store/tokens
-  -> @shoe-store/ui
-  -> @shoe-store/storybook
+@veyqor/tokens
+  -> @veyqor/ui
+  -> @veyqor/storybook
 ```
 
-`@shoe-store/ui` may depend on tokens, React, and selected headless primitives.
+`@veyqor/ui` may depend on tokens, React, and selected headless primitives.
 It must not depend on Storybook, Next.js, visual UI kits, or application business
 logic. Storybook imports UI components for development and documentation, but UI
 components never import stories or Storybook APIs.

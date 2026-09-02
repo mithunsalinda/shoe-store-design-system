@@ -52,10 +52,10 @@ importers:
 
   apps/storybook:
     dependencies:
-      "@shoe-store/tokens":
+      "@veyqor/tokens":
         specifier: workspace:*
         version: link:../../packages/tokens
-      "@shoe-store/ui":
+      "@veyqor/ui":
         specifier: workspace:*
         version: link:../../packages/ui
     devDependencies:
@@ -94,7 +94,7 @@ importers:
       "@base-ui/react":
         specifier: ^1.7.0
         version: 1.7.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      "@shoe-store/tokens":
+      "@veyqor/tokens":
         specifier: workspace:*
         version: link:../tokens
       react:

@@ -1,6 +1,6 @@
 # Component Inventory
 
-Current `@shoe-store/ui` exports:
+Current `@veyqor/ui` exports:
 
 ## Actions
 

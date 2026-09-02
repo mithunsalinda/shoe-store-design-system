@@ -14,7 +14,7 @@ export default defineConfig({
       js: format === "cjs" ? ".cjs" : ".js",
     };
   },
-  external: [/^@base-ui\/react/, "react", "react-dom", "react/jsx-runtime", "@shoe-store/tokens"],
+  external: [/^@base-ui\/react/, "react", "react-dom", "react/jsx-runtime", "@veyqor/tokens"],
   loader: {
     ".css": "local-css",
   },

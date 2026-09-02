@@ -1,13 +1,13 @@
-# @shoe-store/ui
+# @veyqor/ui
 
-React components for the Shoe Design System.
+React components for the Veyqor Design System.
 
 ## Install
 
 This package expects React and React DOM from the consuming application.
 
 ```bash
-pnpm add @shoe-store/ui
+pnpm add @veyqor/ui
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ pnpm add @shoe-store/ui
 Import the CSS once:
 
 ```tsx
-import "@shoe-store/ui/styles.css";
+import "@veyqor/ui/styles.css";
 ```
 
 Use components from the package root:
 
 ```tsx
-import { Button, Dialog, Select } from "@shoe-store/ui";
+import { Button, Dialog, Select } from "@veyqor/ui";
 
 export function ProductActions() {
   return (
@@ -35,10 +35,10 @@ export function ProductActions() {
 ## Development
 
 ```bash
-corepack pnpm --filter @shoe-store/ui test
-corepack pnpm --filter @shoe-store/ui typecheck
-corepack pnpm --filter @shoe-store/ui lint
-corepack pnpm --filter @shoe-store/ui build
+corepack pnpm --filter @veyqor/ui test
+corepack pnpm --filter @veyqor/ui typecheck
+corepack pnpm --filter @veyqor/ui lint
+corepack pnpm --filter @veyqor/ui build
 ```
 
 Storybook examples live in `apps/storybook`.

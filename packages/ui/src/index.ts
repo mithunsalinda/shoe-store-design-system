@@ -239,5 +239,5 @@ export type {
   TooltipSide,
 } from "./components/Tooltip";
 
-export const UI_PACKAGE_NAME = "@shoe-store/ui";
+export const UI_PACKAGE_NAME = "@veyqor/ui";
 export const UI_PACKAGE_VERSION = "0.1.0";

@@ -1,19 +1,19 @@
-# @shoe-store/tokens
+# @veyqor/tokens
 
-Design tokens and CSS custom properties for the Shoe Design System.
+Design tokens and CSS custom properties for the Veyqor Design System.
 
 ## Usage
 
 Import token objects in TypeScript:
 
 ```ts
-import { colors, spacing, themes } from "@shoe-store/tokens";
+import { colors, spacing, themes } from "@veyqor/tokens";
 ```
 
 Import CSS variables:
 
 ```css
-@import "@shoe-store/tokens/styles.css";
+@import "@veyqor/tokens/styles.css";
 ```
 
 Set the active theme with `data-theme`:
@@ -25,7 +25,7 @@ Set the active theme with `data-theme`:
 ## Development
 
 ```bash
-corepack pnpm --filter @shoe-store/tokens typecheck
-corepack pnpm --filter @shoe-store/tokens lint
-corepack pnpm --filter @shoe-store/tokens build
+corepack pnpm --filter @veyqor/tokens typecheck
+corepack pnpm --filter @veyqor/tokens lint
+corepack pnpm --filter @veyqor/tokens build
 ```

@@ -1,7 +1,7 @@
 {
-  "name": "@shoe-store/ui",
+  "name": "@veyqor/ui",
   "version": "0.1.0",
-  "description": "Reusable headless React UI components for the Shoe Store design system.",
+  "description": "Reusable headless React UI components for the Veyqor design system.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
-    "@shoe-store/tokens": "workspace:*"
+    "@veyqor/tokens": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18",

@@ -1,9 +1,9 @@
 {
-  "name": "shoe-design-system",
+  "name": "veyqor-design-system",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Production-ready React design system monorepo for Shoe Store applications.",
+  "description": "Production-ready React design system monorepo for Veyqor applications.",
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "engines": {
@@ -13,7 +13,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "storybook": "turbo run storybook --filter=@shoe-store/storybook",
+    "storybook": "turbo run storybook --filter=@veyqor/storybook",
     "test": "turbo run test",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint -- --fix",

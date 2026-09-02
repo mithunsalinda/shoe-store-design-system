@@ -1,8 +1,8 @@
 {
-  "name": "@shoe-store/storybook",
+  "name": "@veyqor/storybook",
   "version": "0.1.0",
   "private": true,
-  "description": "Storybook documentation site for the Shoe Store design system.",
+  "description": "Storybook documentation site for the Veyqor design system.",
   "type": "module",
   "scripts": {
     "dev": "node ./scripts/run-storybook.mjs dev -p 6006 --disable-telemetry",
@@ -15,8 +15,8 @@
     "clean": "node -e \"fs.rmSync('storybook-static', { recursive: true, force: true })\""
   },
   "dependencies": {
-    "@shoe-store/tokens": "workspace:*",
-    "@shoe-store/ui": "workspace:*"
+    "@veyqor/tokens": "workspace:*",
+    "@veyqor/ui": "workspace:*"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.6.15",

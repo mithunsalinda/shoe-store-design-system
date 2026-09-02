@@ -1,5 +1,5 @@
 import type { Decorator, Preview } from "@storybook/react";
-import "@shoe-store/ui/styles.css";
+import "@veyqor/ui/styles.css";
 
 const withTheme: Decorator = (Story, context) => {
   const theme = context.globals["theme"] as string | undefined;
@@ -24,7 +24,7 @@ const preview: Preview = {
         items: [
           { value: "light", title: "Light" },
           { value: "dark", title: "Dark" },
-          { value: "shoe-store", title: "Shoe Store" },
+          { value: "veyqor", title: "Veyqor" },
         ],
         dynamicTitle: true,
       },

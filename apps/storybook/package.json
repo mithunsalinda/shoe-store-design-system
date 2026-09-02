@@ -1,6 +1,6 @@
 {
   "name": "@mithunsalinda/veyqor-storybook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Storybook documentation site for the Veyqor design system.",
   "type": "module",

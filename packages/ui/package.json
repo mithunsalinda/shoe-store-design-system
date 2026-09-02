@@ -1,6 +1,6 @@
 {
   "name": "@mithunsalinda/veyqor-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable headless React UI components for the Veyqor design system.",
   "type": "module",
   "main": "./dist/index.cjs",
